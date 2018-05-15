@@ -49,6 +49,8 @@
     [self.heartTimer invalidate];
     self.heartTimer=nil;
     [self.socket disconnect];
+    self.socket.delegate = nil;
+    self.socket = nil;
 };
 
 #pragma mark GCDAsyncSocketDelegate
